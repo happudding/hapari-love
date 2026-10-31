@@ -894,9 +894,9 @@ const STORY = {
   owner: '나',
   ownerAvatar: IMG.cav_jihoon, // 채팅 앱에서 쓰는 내 프로필 사진 (기본 사진)
   contacts: {
-    jihoon: { name:'영문25한지훈', phone:'010-2006-0328', noCall:true, color:'#6f9bd8', sns:'jihoon0328', avatar:IMG.cav_jihoon2, ftVideos:[IMG.ft1, IMG.ft2, IMG.ft3, IMG.ft4, IMG.ft5] }, // ftVideos: 페이스타임 영상 (누를 때마다 랜덤)
-    dohoon: { name:'체교24김도훈', phone:'010-2005-0130', noCall:true, color:'#7fb48a', sns:'dohoon0130', avatar:IMG.cav_dohoon },
-    shinyu: { name:'미컴22신정환', phone:'010-2003-1107', noCall:true, color:'#9a8fd0', sns:'shinyu1107', avatar:IMG.cav_shinyu },
+    jihoon: { name:'영문25한지훈', phone:'', noCall:true, color:'#6f9bd8', sns:'jihoon0328', avatar:IMG.cav_jihoon2, ftVideos:[IMG.ft1, IMG.ft2, IMG.ft3, IMG.ft4, IMG.ft5] }, // ftVideos: 페이스타임 영상 (누를 때마다 랜덤)
+    dohoon: { name:'체교24김도훈', phone:'', noCall:true, color:'#7fb48a', sns:'dohoon0130', avatar:IMG.cav_dohoon },
+    shinyu: { name:'미컴22신정환', phone:'', noCall:true, color:'#9a8fd0', sns:'shinyu1107', avatar:IMG.cav_shinyu },
   },
   sms: {},
   chat: {
@@ -1624,7 +1624,7 @@ function renderContactDetail(anim){
     <div class="cdscroll">
       <div class="cdava">${ini}</div>
       <div class="cdname">${esc(c.name)}</div>
-      <div class="cdacts"><span aria-hidden="true">${I.msg}</span>${!c.noCall && c.phone ? `<span class="ftok" id="cdcall" role="button" tabindex="0" aria-label="음성 통화">${I.call}</span>` : `<span aria-hidden="true">${I.call}</span>`}${c.ftOn && c.ftVideos ? `<span class="ftok" id="cdft" role="button" tabindex="0" aria-label="FaceTime 영상 통화">${I.video}</span>` : `<span aria-hidden="true">${I.video}</span>`}<span class="dim" aria-hidden="true">${I.mail}</span></div>
+      <div class="cdacts"><span aria-hidden="true">${I.msg}</span>${!c.noCall ? `<span class="ftok" id="cdcall" role="button" tabindex="0" aria-label="음성 통화">${I.call}</span>` : `<span aria-hidden="true">${I.call}</span>`}${c.ftOn && c.ftVideos ? `<span class="ftok" id="cdft" role="button" tabindex="0" aria-label="FaceTime 영상 통화">${I.video}</span>` : `<span aria-hidden="true">${I.video}</span>`}<span class="dim" aria-hidden="true">${I.mail}</span></div>
       ${c.phone ? `<button class="cdcard cdnum ${c.noCall?'nocall':''}" id="cdnum" aria-label="${esc(c.phone)}로 전화 걸기"><span><small>휴대전화</small><b>${esc(c.phone)}</b></span>${I.call}</button>` : ''}
       <div class="cdcard cdmemo"><small>메모</small></div>
       <div class="cdcard cdgroup"><span>연락처 공유</span><span>즐겨찾기에 추가</span></div>
